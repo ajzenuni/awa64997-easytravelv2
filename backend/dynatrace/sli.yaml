@@ -1,0 +1,4 @@
+spec_version: 0.1.4
+indicators:
+  a_apdex: entitySelector=type(APPLICATION),entityName("My web application"),mzId(-8896408064244866623)&metricSelector=builtin:apps.web.apdex.userType:splitBy():avg:names
+  kua_apdex: entitySelector=type(APPLICATION_METHOD),entityName("loading of page /"),mzId(-8896408064244866623)&metricSelector=builtin:apps.web.action.apdex:splitBy():avg:names
