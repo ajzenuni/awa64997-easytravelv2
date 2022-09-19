@@ -1,17 +1,5 @@
 ---
 spec_version: '0.1.0'
-attachRules:
-  tagRule:
-  - meTypes:
-    - PROCESS_GROUP_INSTANCE
-    tags:
-    - context: CONTEXTLESS
-      key: keptn_service
-      value: $SERVICE
-    - context: CONTEXTLESS
-      key: keptn_managed
----
-spec_version: '0.1.0'
 dashboard: query
 attachRules:
   tagRule:
@@ -27,3 +15,17 @@ attachRules:
     - context: CONTEXTLESS
       key: keptn_stage
       value: $STAGE
+    - context: CONTEXTLESS
+      key: keptn_managed
+---
+spec_version: '0.1.0'
+attachRules:
+  tagRule:
+  - meTypes:
+    - PROCESS_GROUP_INSTANCE
+    tags:
+    - context: CONTEXTLESS
+      key: keptn_service
+      value: $SERVICE
+    - context: CONTEXTLESS
+      key: keptn_managed
