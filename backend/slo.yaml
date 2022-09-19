@@ -1,27 +1,107 @@
 spec_version: ""
 filter: {}
 comparison:
-  compare_with: single_result
-  include_result_with_score: pass
-  number_of_comparison_results: 1
-  aggregate_function: avg
+    compare_with: single_result
+    include_result_with_score: pass
+    number_of_comparison_results: 1
+    aggregate_function: avg
 objectives:
-- sli: kua_apdex
-  displayName: ""
-  pass:
-  - criteria:
-    - '>=.5'
-  warning: []
-  weight: 1
-  key_sli: false
-- sli: a_apdex
-  displayName: ""
-  pass:
-  - criteria:
-    - '>=.5'
-  warning: []
-  weight: 1
-  key_sli: false
+    - sli: rt_p50
+      displayName: ""
+      pass:
+        - criteria:
+            - <=2.322
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: rt_p90
+      displayName: ""
+      pass:
+        - criteria:
+            - <=9.732
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: fr_avg
+      displayName: ""
+      pass:
+        - criteria:
+            - <=0.020
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: rc_sum
+      displayName: ""
+      pass:
+        - criteria:
+            - '>=176280.198'
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: h_disk_max
+      displayName: ""
+      pass:
+        - criteria:
+            - <=3.340
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: h_mem_avg
+      displayName: ""
+      pass:
+        - criteria:
+            - <=42.232
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: h_cpu_avg
+      displayName: ""
+      pass:
+        - criteria:
+            - <=13.686
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: p_cpu_avg
+      displayName: ""
+      pass:
+        - criteria:
+            - <=0.469
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: p_mem_avg
+      displayName: ""
+      pass:
+        - criteria:
+            - <=1.739
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: a_apdex
+      displayName: ""
+      pass:
+        - criteria:
+            - '>=0.827'
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: a_xhr_avg
+      displayName: ""
+      pass:
+        - criteria:
+            - <=125.340
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: a_load_avg
+      displayName: ""
+      pass:
+        - criteria:
+            - <=2610.812
+      warning: []
+      weight: 1
+      key_sli: false
 total_score:
-  pass: 90%
-  warning: 70%
+    pass: 90%
+    warning: 70%
