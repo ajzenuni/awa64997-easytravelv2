@@ -1,0 +1,107 @@
+spec_version: ""
+filter: {}
+comparison:
+    compare_with: single_result
+    include_result_with_score: pass
+    number_of_comparison_results: 1
+    aggregate_function: avg
+objectives:
+    - sli: rt_p50
+      displayName: ""
+      pass:
+        - criteria:
+            - <=2.413
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: rt_p90
+      displayName: ""
+      pass:
+        - criteria:
+            - <=9.922
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: fr_avg
+      displayName: ""
+      pass:
+        - criteria:
+            - <=0.019
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: rc_sum
+      displayName: ""
+      pass:
+        - criteria:
+            - '>=225047.400'
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: h_disk_max
+      displayName: ""
+      pass:
+        - criteria:
+            - <=1.320
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: h_mem_avg
+      displayName: ""
+      pass:
+        - criteria:
+            - <=40.285
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: h_cpu_avg
+      displayName: ""
+      pass:
+        - criteria:
+            - <=12.900
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: p_cpu_avg
+      displayName: ""
+      pass:
+        - criteria:
+            - <=0.457
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: p_mem_avg
+      displayName: ""
+      pass:
+        - criteria:
+            - <=1.733
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: a_apdex
+      displayName: ""
+      pass:
+        - criteria:
+            - '>=0.888'
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: a_xhr_avg
+      displayName: ""
+      pass:
+        - criteria:
+            - <=123.626
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: a_load_avg
+      displayName: ""
+      pass:
+        - criteria:
+            - <=2499.183
+      warning: []
+      weight: 1
+      key_sli: false
+total_score:
+    pass: 90%
+    warning: 70%
