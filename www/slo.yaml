@@ -6,6 +6,26 @@ comparison:
     number_of_comparison_results: 1
     aggregate_function: avg
 objectives:
+    - sli: awa64997-easytravelv2_response_time_:8080
+      displayName: ""
+      pass:
+        - criteria:
+            - '>=97.500000'
+      warning:
+        - criteria:
+            - '>=95.000000'
+      weight: 1
+      key_sli: false
+    - sli: awa64997-easytravelv2_failure_rate_:8080
+      displayName: ""
+      pass:
+        - criteria:
+            - '>=97.500000'
+      warning:
+        - criteria:
+            - '>=95.000000'
+      weight: 1
+      key_sli: false
     - sli: awa64997-easytravelv2_response_time_:80
       displayName: ""
       pass:
