@@ -6,246 +6,36 @@ comparison:
     number_of_comparison_results: 1
     aggregate_function: avg
 objectives:
-    - sli: response_time_(p50)
-      displayName: Response Time (P50)
+    - sli: awa64997-easytravelv2_response_time_:80
+      displayName: ""
       pass:
         - criteria:
-            - '>=0.000000'
-            - <1545.798000
+            - '>=97.500000'
       warning:
         - criteria:
-            - '>=0.000000'
-            - <1619.407000
+            - '>=95.000000'
       weight: 1
       key_sli: false
-    - sli: response_time_(p90)
-      displayName: Response Time (P90)
+    - sli: awa64997-easytravelv2_failure_rate_:80
+      displayName: ""
       pass:
         - criteria:
-            - '>=0.000000'
-            - <10548.975000
+            - '>=97.500000'
       warning:
         - criteria:
-            - '>=0.000000'
-            - <11051.307000
+            - '>=95.000000'
       weight: 1
       key_sli: false
-    - sli: failure_rate___(avg)
-      displayName: Failure Rate % (AVG)
+    - sli: awa64997-easytravelv2_availability_nginxeasytravel-www-(easytravel-www-7688679898-zcw8k)
+      displayName: ""
       pass:
         - criteria:
-            - '>=0.000000'
-            - <0.020000
+            - '>=97.500000'
       warning:
         - criteria:
-            - '>=0.000000'
-            - <0.021000
-      weight: 1
-      key_sli: false
-    - sli: throughput_(sum)
-      displayName: Throughput (SUM)
-      pass: []
-      warning: []
-      weight: 1
-      key_sli: false
-    - sli: host_disk_queue_length_(max)
-      displayName: Host Disk Queue Length (MAX)
-      pass:
-        - criteria:
-            - '>=0.000000'
-            - <0.120000
-      warning:
-        - criteria:
-            - '>=0.000000'
-            - <0.125000
-      weight: 1
-      key_sli: false
-    - sli: host_memory_used___(avg)
-      displayName: Host Memory Used % (AVG)
-      pass:
-        - criteria:
-            - '>=0.000000'
-            - <44.491000
-      warning:
-        - criteria:
-            - '>=0.000000'
-            - <46.344000
-      weight: 1
-      key_sli: false
-    - sli: host_cpu_used___(avg)
-      displayName: Host CPU Used % (AVG)
-      pass:
-        - criteria:
-            - '>=0.000000'
-            - <15.412000
-      warning:
-        - criteria:
-            - '>=0.000000'
-            - <16.054000
-      weight: 1
-      key_sli: false
-    - sli: process_cpu_used___(avg)
-      displayName: Process CPU Used % (AVG)
-      pass:
-        - criteria:
-            - '>=0.000000'
-            - <0.396000
-      warning:
-        - criteria:
-            - '>=0.000000'
-            - <0.413000
-      weight: 1
-      key_sli: false
-    - sli: pgi_availability_used___(avg)
-      displayName: PGI Availability Used % (AVG)
-      pass: []
-      warning: []
-      weight: 1
-      key_sli: false
-    - sli: process_memory_used___(avg)
-      displayName: Process Memory Used % (AVG)
-      pass:
-        - criteria:
-            - '>=0.000000'
-            - <1.644000
-      warning:
-        - criteria:
-            - '>=0.000000'
-            - <1.712000
-      weight: 1
-      key_sli: false
-    - sli: apdex_(avg)
-      displayName: Apdex (AVG)
-      pass: []
-      warning: []
-      weight: 1
-      key_sli: false
-    - sli: xhr_action_duration_(avg)
-      displayName: XHR Action Duration (AVG)
-      pass:
-        - criteria:
-            - '>=0.000000'
-            - <139.936000
-      warning:
-        - criteria:
-            - '>=0.000000'
-            - <146.600000
-      weight: 1
-      key_sli: false
-    - sli: load_action_duration_(avg)
-      displayName: Load Action Duration (AVG)
-      pass:
-        - criteria:
-            - '>=0.000000'
-            - <2640.022000
-      warning:
-        - criteria:
-            - '>=0.000000'
-            - <2765.738000
-      weight: 1
-      key_sli: false
-    - sli: rt_p50
-      displayName: Response time over time
-      pass:
-        - criteria:
-            - <=1.546
-      warning: []
-      weight: 1
-      key_sli: false
-    - sli: rt_p90
-      displayName: Response time over time
-      pass:
-        - criteria:
-            - <=10.549
-      warning: []
-      weight: 1
-      key_sli: false
-    - sli: fr_avg
-      displayName: Failure Rate (Avg)
-      pass:
-        - criteria:
-            - <=0.020
-      warning: []
-      weight: 1
-      key_sli: false
-    - sli: rc_sum
-      displayName: Throughput
-      pass:
-        - criteria:
-            - '>=179163.209'
-      warning: []
-      weight: 1
-      key_sli: false
-    - sli: h_disk_max
-      displayName: Host Disk Queue (max)
-      pass:
-        - criteria:
-            - <=0.120
-      warning: []
-      weight: 1
-      key_sli: false
-    - sli: h_mem_avg
-      displayName: Host Memory used %
-      pass:
-        - criteria:
-            - <=44.491
-      warning: []
-      weight: 1
-      key_sli: false
-    - sli: h_cpu_avg
-      displayName: Host CPU %
-      pass:
-        - criteria:
-            - <=15.412
-      warning: []
-      weight: 1
-      key_sli: false
-    - sli: p_cpu_avg
-      displayName: Process CPU
-      pass:
-        - criteria:
-            - <=0.396
-      warning: []
-      weight: 1
-      key_sli: false
-    - sli: pgi_availability__
-      displayName: PGI Availability %
-      pass: []
-      warning: []
-      weight: 1
-      key_sli: false
-    - sli: p_mem_avg
-      displayName: Process Memory
-      pass:
-        - criteria:
-            - <=1.644
-      warning: []
-      weight: 1
-      key_sli: false
-    - sli: a_apdex
-      displayName: Apdex (AVG)
-      pass:
-        - criteria:
-            - '>=0.874'
-      warning: []
-      weight: 1
-      key_sli: false
-    - sli: a_xhr_avg
-      displayName: ActionDuration XHR
-      pass:
-        - criteria:
-            - <=139.936
-      warning: []
-      weight: 1
-      key_sli: false
-    - sli: a_load_avg
-      displayName: ActionDuration Load
-      pass:
-        - criteria:
-            - <=2640.022
-      warning: []
+            - '>=95.000000'
       weight: 1
       key_sli: false
 total_score:
     pass: 90%
-    warning: 70%
+    warning: 75%
